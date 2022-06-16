@@ -15,6 +15,7 @@ function updateLoc(position) {
 
 function deleteEntry() {
     console.log("Deleting")
+    // Use fetch to delete from DB
 }
 
 getGeo()
