@@ -8,8 +8,8 @@ html
             each e in allentries
                 li.entries
                     h2.title= e.title
-                    .author= 'By ' + e.author
+                    .author= e.author
                     .body= e.body
                     .date= e.date.toLocaleDateString('en-us', {weekday: "long",year: "numeric", month: "short", day: "numeric"})
-                    a(class='button' onclick="deleteEntry()") Delete Entry
+                    a(class='button' onclick="deleteEntry(this.parentElement)") Delete Entry
         include footer.pug

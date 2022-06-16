@@ -13,9 +13,21 @@ function updateLoc(position) {
                     ", Longitude: " + position.coords.longitude;
 }
 
-function deleteEntry() {
-    console.log("Deleting")
-    // Use fetch to delete from DB
+async function deleteEntry(ele) {
+    // Store/populate object representing a Blog entry
+    let data = {}
+    data.title = ele.getElementsByClassName("title")[0].innerText;
+    data.author = ele.getElementsByClassName("author")[0].innerText;
+    // Log entry to see format is correct
+    console.log(data);
+    // Use FETCH to pass object along with DELETE request to the server (index.js)
+    const response = await fetch(`http://localhost:3000/web/delete/${data.title}/${data.author}`, {method: 'DELETE'});
+    
+    if(response) {
+        ele.innerHTML = "<p>Blog post deleted...</p>";
+    }
+    
+    // Server recieves delete request to specified URL, parses into object, then attempts to delete from DB
 }
 
 getGeo()

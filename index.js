@@ -65,6 +65,20 @@ app.post('/web/newentry', async (req, res) => {
     res.redirect('/web/entries');
 });
 
+app.delete('/web/delete/:title/:author', async (req, res) => {
+    console.log("Delete request recieved...")
+    let data = req.params;
+    console.log(data)
+    Blog.deleteOne(data, (err) => {
+        if ( err ) {
+            console.log(err);
+        } else {
+            console.log("Item deleted!");
+        }
+    });
+    res.redirect('back');
+})
+
 // SERVER ----------------------------------------------
 app.listen(PORT, () => {
     console.log("Listening on Port 3000....");

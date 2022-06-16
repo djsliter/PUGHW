@@ -1,8 +1,10 @@
 header
-    img(src='/images/pugicon.png' class='logo')
+    a(href="http://localhost:3000/web/entries")
+        img(src='/images/pugicon.png' class='logo')
     h1.title= "The Pug Blog"
     ul 
         li 
             div.menuLink
                 a(href='/web/newentry') Add Post
-    div(id='userLoc') ....Getting Location....
+        li
+            div(id='userLoc') ....Getting Location....

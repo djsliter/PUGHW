@@ -37,19 +37,30 @@ a.button:hover {
 }
 
 header {
-    background-color: lightblue;
+    background-color: rgb(15, 195, 255);
     margin-top: -100px;
     margin-left: -10px;
     padding: 5px;
     position: fixed;
     width: 100%;
+    box-shadow: 0px 2px gray;
 }
-header.menuLink {
+div.menuLink {
     float: left;
     padding: 5px;
+    background-color: rgb(91, 248, 52);
+    border-radius: 5px;
+    margin: 10px;
+}
+#userLoc {
+    float: right;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 10px;
 }
 body {
     margin-top: 100px;
+    background-color: aliceblue;
 }
 
 h1.title {
@@ -60,5 +71,19 @@ h1.title {
 #newPost {
     display: block;
     margin: 0 auto;
-    display: inline-block
+    display: inline-block;
+    align-items: center;
+}
+#newPost input {
+    margin: 5px;
+    align-items: center;
+}
+#newPost input:focus {
+    background-color: aquamarine;
+}
+#newPost textarea:focus {
+    background-color: aquamarine;
+}
+footer {
+    margin-top: 50%;
 }
