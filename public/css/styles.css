@@ -25,7 +25,7 @@ img.logo {
 }
 
 a.button {
-    background-color: red;
+    background-color: rgb(245, 59, 59);
     border-radius: 5px;
     padding: 2px;
     float: right;
