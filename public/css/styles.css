@@ -1,0 +1,64 @@
+div.author {
+    background-color: lightblue;
+    color: #000;
+    width: 50%;
+}
+div.date {
+    margin: 10px;
+}
+
+ul {
+    list-style: none;
+    display: center;
+}
+
+li.entries {
+    border-radius: 15px;
+    background-color: #eee;
+    padding: 5px;
+    margin: 10px;
+}
+
+img.logo {
+    height: 75px;
+    float: left;
+}
+
+a.button {
+    background-color: red;
+    border-radius: 5px;
+    padding: 2px;
+    float: right;
+    margin-top: -20px;
+}
+a.button:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+header {
+    background-color: lightblue;
+    margin-top: -100px;
+    margin-left: -10px;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+}
+header.menuLink {
+    float: left;
+    padding: 5px;
+}
+body {
+    margin-top: 100px;
+}
+
+h1.title {
+    float: right;
+    margin-right: 30px;
+}
+
+#newPost {
+    display: block;
+    margin: 0 auto;
+    display: inline-block
+}

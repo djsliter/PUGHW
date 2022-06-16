@@ -1,0 +1,18 @@
+html    
+    head 
+        link(rel='stylesheet' href='/css/styles.css')
+    body 
+        include header.pug 
+        form(action='/web/newentry' method='post' id='newPost')
+            label(for='title') Post Title: 
+                input(name='title' type='text')
+            br
+            label(for='author') Author: 
+                input(name='author' type='text')
+            br
+            label(for='body') Content: 
+                textarea(name='body' rows=5)
+            br
+            input(type='submit' value='Save Entry')
+        include footer.pug
+
