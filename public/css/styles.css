@@ -70,20 +70,29 @@ h1.title {
 
 #newPost {
     display: block;
-    margin: 0 auto;
+    margin-left: 30%;
+    margin-right: 30%;
     display: inline-block;
-    align-items: center;
+    width: 40%;
 }
 #newPost input {
     margin: 5px;
-    align-items: center;
+    width: 100%;
+}
+#newPost textarea {
+    width: 100%;
+    margin: 5px;
 }
 #newPost input:focus {
     background-color: aquamarine;
+    border: 1px solid black;
 }
 #newPost textarea:focus {
     background-color: aquamarine;
+    width: 100%;
 }
+
+
 footer {
     margin-top: 50%;
 }

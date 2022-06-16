@@ -57,12 +57,18 @@ app.get('/web/newentry', (req, res) => {
 
 // Handle post request to /web/newentry
 app.post('/web/newentry', async (req, res) => {
-    // Save body data to model
-    const post = new Blog(req.body);
-    // try to save to DB
-    post.save();
-    // Upon successful save, redirect to entries
-    res.redirect('/web/entries');
+    console.log(req.body);
+    if (req.body.title == "" || req.body.author == "" || req.body.body == "") {
+        console.log("Cannot save empty entry...");
+        res.status(500).send("Entries must have Title, Author, and Content...");
+    } else {
+        // Save body data to model
+        const post = new Blog(req.body);
+        // try to save to DB
+        post.save();
+        // Upon successful save, redirect to entries
+        res.redirect('/web/entries');
+    }
 });
 
 app.delete('/web/delete/:title/:author', async (req, res) => {
