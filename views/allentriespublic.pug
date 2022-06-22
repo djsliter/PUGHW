@@ -1,0 +1,14 @@
+html
+    head 
+        link(rel='stylesheet' href='/css/styles.css')
+    body
+        include header.pug
+        h1 All Blog Entries:
+        ul(id='allEntries')
+            each e in allentries
+                li.entries
+                    h2.title= e.title
+                    .author= e.author
+                    .body= e.body
+                    .date= e.date.toLocaleDateString('en-us', {weekday: "long",year: "numeric", month: "short", day: "numeric"})
+        include footer.pug

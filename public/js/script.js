@@ -24,6 +24,7 @@ async function deleteEntry(ele) {
     const response = await fetch(`http://localhost:3000/web/delete/${data.title}/${data.author}`, {method: 'DELETE'});
     
     if(response) {
+        // Change content of deleted blog post
         ele.innerHTML = "<p>Blog post deleted...</p>";
     }
     
